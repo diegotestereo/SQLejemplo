@@ -12,8 +12,8 @@ import android.widget.EditText;
 public class MainActivity extends Activity {
  EditText eTxt_Codigo,eTxt_Nombre;
  Button btn_Ins,btn_Act,btn_Elim;
-	
-	
+ String Nombre_;
+ int Codigo_;
 	
 	
     @Override
@@ -22,6 +22,9 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         
         levantarXML();
+        
+        
+        
         botones();
 // creo lbase de datos DBUsuarios
       UsuariosSQLiteHelper usdbh = new UsuariosSQLiteHelper(this, "DBUsuarios", null, 1);
@@ -46,11 +49,15 @@ public class MainActivity extends Activity {
 	private void botones() {
 		
 		
+		
 		 UsuariosSQLiteHelper usdbh = new UsuariosSQLiteHelper(this, "DBUsuarios", null, 1);
 	      final SQLiteDatabase bd =usdbh.getWritableDatabase();
 	      
 		btn_Act.setOnClickListener(new OnClickListener() {
-			String sql_comando="";
+           // String 	Nombre_= eTxt_Nombre.getText().toString();
+			
+			
+			String sql_comando="UPDATE Usuarios SET Nombre ='UsNuevo' WHERE Codigo=6";
 			@Override
 			public void onClick(View v) {
 				bd.execSQL(sql_comando);
