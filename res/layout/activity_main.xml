@@ -22,7 +22,7 @@
                 android:text="codigo: " />
 
             <EditText
-                android:id="@+id/editText1"
+                android:id="@+id/eTxt_Codigo"
                 android:layout_width="42dp"
                 android:layout_height="wrap_content"
                 android:ems="10" >
@@ -37,7 +37,7 @@
                 android:text="nombre: " />
 
             <EditText
-                android:id="@+id/editText2"
+                android:id="@+id/eTxt_Nombre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -50,19 +50,19 @@
             android:layout_height="wrap_content" >
 
             <Button
-                android:id="@+id/button1"
+                android:id="@+id/btn_Ins"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Ins" />
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/btn_Act"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Act" />
 
             <Button
-                android:id="@+id/button3"
+                android:id="@+id/btn_Elim"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Elim" />
