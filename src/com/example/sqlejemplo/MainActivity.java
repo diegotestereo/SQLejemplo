@@ -44,21 +44,26 @@ public class MainActivity extends Activity {
     }
 
 	private void botones() {
+		
+		
+		 UsuariosSQLiteHelper usdbh = new UsuariosSQLiteHelper(this, "DBUsuarios", null, 1);
+	      final SQLiteDatabase bd =usdbh.getWritableDatabase();
+	      
 		btn_Act.setOnClickListener(new OnClickListener() {
-			
+			String sql_comando="";
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
+				bd.execSQL(sql_comando);
 				
 			}
 		});
 		
 		
 		btn_Elim.setOnClickListener(new OnClickListener() {
-			
+			String sql_comando="DELETE FROM Usuarios WHERE Codigo=6";
 			@Override
 			public void onClick(View v) {
-			
+				bd.execSQL(sql_comando);
 			
 				
 			}
@@ -66,11 +71,11 @@ public class MainActivity extends Activity {
 		
 		
 		btn_Ins.setOnClickListener(new OnClickListener() {
-			
+			String sql_comando="INSERT TO Usuarios (Codigo,Nombre) VALUES (6,'Usuario6')";
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
 				
+				bd.execSQL(sql_comando);
 			}
 		});
 	}
